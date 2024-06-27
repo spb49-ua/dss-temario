@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos del Curso</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 15px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+            margin: 5px;
+        }
+        a:hover {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+        .iframe-container {
+            display: none;
+            width: 100%;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+    </style>
+    <script>
+        function toggleIframe() {
+            const iframeContainer = document.getElementById('iframe-container');
+            if (iframeContainer.style.display === 'none' || iframeContainer.style.display === '') {
+                iframeContainer.style.display = 'block';
+            } else {
+                iframeContainer.style.display = 'none';
+            }
+        }
+        function toggleIframe2() {
+            const iframeContainer = document.getElementById('iframe-container2');
+            if (iframeContainer.style.display === 'none' || iframeContainer.style.display === '') {
+                iframeContainer.style.display = 'block';
+            } else {
+                iframeContainer.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Documentos del Curso</h1>
+        <ul>
+            <li><a href="docs/T1_introduccion.pdf" download>1. Presentación e Introducción al diseño de software</a></li>
+            <li><a href="docs/T2_repaso_uml.pdf" download>2. Repaso UML</a></li>
+            <li><a href="docs/T3_arquitectura_software.pdf" download>3. Patrones arquitecturales y Arquitectura en capas</a></li>
+            <li><a href="docs/T4_logica_negocio_acceso_datos.pdf" download>4. Capas de lógica de negocio y acceso a datos</a></li>
+            <li><a href="docs/T5_mapeo_objeto_relacional.pdf" download>5. Modelo de dominio y Mapeo objeto-relacional (ORM)</a></li>
+            <li><a href="docs/T6_capa_presentacion.pdf" download>6. Capa de presentación</a></li>
+            <li><a href="docs/T7_patrones_arquitecturales.pdf" download>7. Otros patrones arquitecturales</a></li>
+            <li><a href="#" onclick="toggleIframe()">Ejercicio: Tienda online</a></li>
+            <li><a href="docs/T8_patrones_GRASP.pdf" download>8. Diseño detallado y Patrones GRASP</a></li>
+            <li><a href="docs/T9_principios_generales.pdf" download>9. Principios generales de diseño</a></li>
+            <li><a href="docs/T10_intro_gof.pdf" download>10. Introducción a los patrones GOF</a></li>
+            <li><a href="#" onclick="toggleIframe2()">Actividad sobre patrones GOF</a></li>
+            <li><a href="docs/T12_gof_01.pdf" download>12. Soluciones patrones GOF</a></li>
+            <li><a href="docs/T13_gof_02.pdf" download>13. Soluciones patrones GOF (II)</a></li>
+        </ul>
+        <div class="iframe-container" id="iframe-container">
+            <iframe src="tienda.html"></iframe>
+        </div>
+        <div class="iframe-container" id="iframe-container2">
+            <iframe src="patrones.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>
